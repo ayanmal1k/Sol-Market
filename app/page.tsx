@@ -1,0 +1,282 @@
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Badge } from "@/components/ui/badge"
+import { ArrowRight, Clock, FlameIcon as Fire, Sparkles, TrendingUp, Shield, Zap, DollarSign } from "lucide-react"
+import FeaturedDeals from "@/components/featured-deals"
+import HowItWorks from "@/components/how-it-works"
+import Newsletter from "@/components/newsletter"
+import ScrollReveal from "@/components/scroll-reveal"
+import ServiceStats from "@/components/service-stats"
+import SubscriptionComparison from "@/components/subscription-comparison"
+import WalletInfo from "@/components/wallet-info"
+import { getSubscriptionLogo } from "@/utils/subscription-logos"
+
+export default function Home() {
+  const subscriptions = [
+    {
+      id: "netflix-premium",
+      name: "Netflix Premium",
+      provider: "Netflix",
+      duration: "1 Month",
+      originalPrice: "15.49",
+      discountPrice: "8.99",
+      discount: "42%",
+      category: "Streaming",
+    },
+    {
+      id: "spotify-premium",
+      name: "Spotify Premium",
+      provider: "Spotify",
+      duration: "3 Months",
+      originalPrice: "29.97",
+      discountPrice: "18.50",
+      discount: "38%",
+      category: "Music",
+    },
+    {
+      id: "adobe-creative-cloud",
+      name: "Adobe Creative Cloud",
+      provider: "Adobe",
+      duration: "1 Month",
+      originalPrice: "52.99",
+      discountPrice: "32.99",
+      discount: "38%",
+      category: "Design",
+    },
+    {
+      id: "disney-plus",
+      name: "Disney Plus",
+      provider: "Disney",
+      duration: "6 Months",
+      originalPrice: "47.94",
+      discountPrice: "28.99",
+      discount: "40%",
+      category: "Streaming",
+    },
+  ]
+
+  return (
+    <>
+      <ScrollReveal />
+      <div className="flex flex-col gap-16 pb-16">
+        {/* Hero Section */}
+        <section className="hero-gradient relative overflow-hidden pt-16">
+          <div className="container relative z-10 grid gap-8 pb-16 pt-8 md:grid-cols-2 md:gap-12 md:pb-24 md:pt-16">
+            <div className="flex flex-col justify-center gap-6">
+              <Badge className="w-fit bg-primary/10 text-primary hover:bg-primary/20 animate-fade-in">
+                <Sparkles className="mr-1 h-3 w-3 animate-pulse" />
+                Premium subscriptions with crypto
+              </Badge>
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl animate-slide-in-left">
+                Buy <span className="text-primary">Premium</span> Subscriptions with $SOL or $SOLSCRIBE
+              </h1>
+              <p className="text-xl text-muted-foreground animate-slide-in-left delay-200">
+                Get Netflix, Spotify, Adobe, and more at discounted prices. Pay with SOL and save up to 50% on your
+                favorite platforms.
+              </p>
+              <div className="flex flex-wrap gap-4 animate-fade-in delay-300">
+                <Button size="lg" asChild className="animate-bounce-slow">
+                  <Link href="/subscriptions">Browse Subscriptions</Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link href="/deals">View Deals</Link>
+                </Button>
+              </div>
+              <div className="flex flex-wrap gap-8 animate-fade-in delay-400">
+                <div>
+                  <p className="text-3xl font-bold">40+</p>
+                  <p className="text-sm text-muted-foreground">Subscriptions</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold">50%</p>
+                  <p className="text-sm text-muted-foreground">Avg. Savings</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold">10K+</p>
+                  <p className="text-sm text-muted-foreground">Happy Customers</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative flex items-center justify-center">
+              <div className="relative h-[400px] w-[400px] animate-float">
+                <div className="absolute inset-0 animate-spin-slow opacity-30 blur-xl">
+                  <Image src="/solistryx-logo-clean.png" alt="Glow effect" fill className="object-contain" priority />
+                </div>
+                <Image
+                  src="/solistryx-logo-clean.png"
+                  alt="Solsubscription Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-6 left-1/2 w-[90%] -translate-x-1/2 rounded-xl bg-background/80 p-4 backdrop-blur-md animate-fade-in delay-500">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold">Netflix Premium</p>
+                    <p className="text-sm text-muted-foreground">1 Month Subscription</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-sm text-muted-foreground line-through">$15.49</p>
+                    <p className="font-semibold text-primary">0.05 SOL</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
+        </section>
+
+        {/* Wallet Info Section */}
+        <section className="container">
+          <div className="flex justify-center">
+            <WalletInfo />
+          </div>
+        </section>
+
+        {/* Service Stats Section */}
+        <ServiceStats />
+
+        {/* Features Section */}
+        <section className="container py-16">
+          <div className="mb-12 text-center reveal">
+            <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
+              <Shield className="mr-1 h-3 w-3" />
+              Why Choose Us
+            </Badge>
+            <h2 className="mb-4 text-3xl font-bold tracking-tight">
+              <Shield className="mr-2 inline-block h-8 w-8 text-primary" />
+              Platform Features
+            </h2>
+            <p className="mx-auto max-w-2xl text-muted-foreground">
+              Experience the best in crypto-powered subscription marketplace
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-3">
+            <Card className="text-center reveal">
+              <CardContent className="p-6">
+                <Shield className="h-12 w-12 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-semibold mb-2">Secure & Instant</h3>
+                <p className="text-muted-foreground">
+                  All transactions are secured by Solana blockchain. Get your subscription details instantly after
+                  payment.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="text-center reveal">
+              <CardContent className="p-6">
+                <DollarSign className="h-12 w-12 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-semibold mb-2">Best Prices</h3>
+                <p className="text-muted-foreground">
+                  Save up to 50% on premium subscriptions. We offer the most competitive prices in the market.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="text-center reveal">
+              <CardContent className="p-6">
+                <Zap className="h-12 w-12 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
+                <p className="text-muted-foreground">
+                  Our dedicated support team is available round the clock to help you with any issues.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Trending Subscriptions */}
+        <section className="container py-16">
+          <div className="mb-8 flex flex-wrap items-center justify-between gap-4 reveal">
+            <div>
+              <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
+                <TrendingUp className="mr-1 h-3 w-3" />
+                Most Popular
+              </Badge>
+              <h2 className="mb-4 text-3xl font-bold tracking-tight">
+                <TrendingUp className="mr-2 inline-block h-8 w-8 text-primary" />
+                Trending Subscriptions
+              </h2>
+              <p className="text-muted-foreground">The most popular subscriptions on Solsubscription right now</p>
+            </div>
+            <Tabs defaultValue="all">
+              <TabsList>
+                <TabsTrigger value="all">All</TabsTrigger>
+                <TabsTrigger value="streaming">Streaming</TabsTrigger>
+                <TabsTrigger value="music">Music</TabsTrigger>
+                <TabsTrigger value="design">Design</TabsTrigger>
+              </TabsList>
+            </Tabs>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {subscriptions.map((sub, index) => (
+              <Link href={`/subscription/${sub.id}`} key={sub.id}>
+                <Card className={`card-hover overflow-hidden reveal`} style={{ animationDelay: `${index * 100}ms` }}>
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src={getSubscriptionLogo(sub.provider, sub.name) || "/placeholder.svg"}
+                      alt={sub.name}
+                      fill
+                      className="object-contain p-4 transition-transform duration-300 hover:scale-110"
+                    />
+                    <div className="absolute left-2 top-2 rounded-full bg-accent px-2 py-1 text-xs font-medium">
+                      <Fire className="mr-1 inline h-3 w-3" />
+                      {sub.discount} OFF
+                    </div>
+                    <Badge className="absolute right-2 top-2" variant="secondary">
+                      {sub.category}
+                    </Badge>
+                  </div>
+                  <CardContent className="p-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-semibold">{sub.name}</h3>
+                        <p className="text-sm text-muted-foreground">{sub.duration}</p>
+                      </div>
+                      <Badge variant="outline" className="gap-1 border-primary/50 text-primary">
+                        <Clock className="h-3 w-3" /> Limited
+                      </Badge>
+                    </div>
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-between border-t p-4">
+                    <div>
+                      <p className="text-xs text-muted-foreground line-through">${sub.originalPrice}</p>
+                      <p className="font-semibold">${sub.discountPrice}</p>
+                    </div>
+                    <Button size="sm" variant="outline">
+                      Buy Now
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center reveal">
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/subscriptions">
+                View all subscriptions
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+
+        {/* Featured Deals */}
+        <FeaturedDeals />
+
+        {/* Subscription Comparison Tool */}
+        <SubscriptionComparison />
+
+        {/* How It Works */}
+        <HowItWorks />
+
+        {/* Newsletter */}
+        <Newsletter />
+      </div>
+    </>
+  )
+}
