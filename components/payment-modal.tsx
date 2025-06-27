@@ -36,8 +36,20 @@ export default function PaymentModal({ isOpen, onClose, subscription }: PaymentM
   const [email, setEmail] = useState("")
   const [paymentMethod, setPaymentMethod] = useState<"sol" | "solscribe">("sol")
 
-  // Calculate SOLSCRIBE price (50x the SOL price)
-  const solscribePrice = (Number(subscription.solPrice) * 50).toFixed(2)
+  // Calculate SOLSCRIBE price with custom multipliers
+  const calculateSolscribePrice = (solAmount: number): number => {
+    if (solAmount <= 0.5) {
+      return Math.floor(solAmount * 7500000); // Higher multiplier for smaller amounts
+    } else if (solAmount <= 1) {
+      return Math.floor(solAmount * 6000000);
+    } else if (solAmount <= 2) {
+      return Math.floor(solAmount * 4500000);
+    } else {
+      return Math.floor(solAmount * 3000000); // Base multiplier for larger amounts
+    }
+  };
+
+  const solscribePrice = calculateSolscribePrice(Number(subscription.solPrice)).toLocaleString();
 
   useEffect(() => {
     if (!isOpen) return
@@ -130,7 +142,7 @@ export default function PaymentModal({ isOpen, onClose, subscription }: PaymentM
               <div className="text-right">
                 <div className="text-xl font-bold">${subscription.price} USD</div>
                 <div className="text-sm text-muted-foreground">
-                  ({paymentMethod === "sol" ? `${subscription.solPrice} SOL` : `${solscribePrice} SOLSCRIBE`})
+                  ({paymentMethod === "sol" ? `${subscription.solPrice} SOL` : `${solscribePrice} $SOLSCRIBE`})
                 </div>
               </div>
             </div>
@@ -171,13 +183,13 @@ export default function PaymentModal({ isOpen, onClose, subscription }: PaymentM
                 onClick={() => setPaymentMethod("solscribe")}
                 className="w-full"
               >
-                Pay with SOLSCRIBE
+                Pay with $SOLSCRIBE
               </Button>
             </div>
 
             <div className="space-y-3">
               <p className="text-sm font-medium">
-                Send {paymentMethod === "sol" ? `${subscription.solPrice} SOL` : `${solscribePrice} SOLSCRIBE`} to this address:
+                Send {paymentMethod === "sol" ? `${subscription.solPrice} SOL` : `${solscribePrice} $SOLSCRIBE`} to this address:
               </p>
               <div className="flex items-center gap-2 p-3 bg-muted rounded-lg">
                 <code className="flex-1 text-sm font-mono break-all">{currentWalletAddress}</code>
