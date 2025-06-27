@@ -4,40 +4,38 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Percent } from "lucide-react"
+import { getSubscriptionLogo } from "@/utils/subscription-logos"
 
 export default function FeaturedDeals() {
   const deals = [
     {
-      id: 1,
-      name: "YouTube Premium Family",
+      id: "youtube-premium",
+      name: "YouTube Premium",
       provider: "YouTube",
-      duration: "6 Months",
-      originalPrice: "107.94",
-      discountPrice: "49.99",
-      discount: "54%",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=400&fit=crop",
-      category: "Entertainment",
+      duration: "1 Month",
+      originalPrice: "11.99",
+      discountPrice: "7.99",
+      discount: "33%",
+      category: "Streaming",
     },
     {
-      id: 2,
+      id: "microsoft-office-365",
       name: "Microsoft Office 365",
       provider: "Microsoft",
       duration: "1 Year",
       originalPrice: "99.99",
       discountPrice: "59.99",
       discount: "40%",
-      image: "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?w=400&h=400&fit=crop",
       category: "Productivity",
     },
     {
-      id: 3,
+      id: "amazon-prime",
       name: "Amazon Prime",
       provider: "Amazon",
       duration: "1 Year",
       originalPrice: "139.00",
       discountPrice: "79.99",
       discount: "42%",
-      image: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=400&h=400&fit=crop",
       category: "Shopping",
     },
   ]
@@ -58,14 +56,14 @@ export default function FeaturedDeals() {
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {deals.map((deal, index) => (
-          <Link href={`/subscription/${deal.id + 10}`} key={deal.id}>
+          <Link href={`/subscription/${deal.id}`} key={deal.id}>
             <Card className={`card-hover h-full overflow-hidden reveal`} style={{ animationDelay: `${index * 150}ms` }}>
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
-                  src={deal.image || "/placeholder.svg"}
+                  src={getSubscriptionLogo(deal.provider, deal.name) || "/placeholder.svg"}
                   alt={`${deal.name} deal`}
                   fill
-                  className="object-cover transition-transform duration-300 hover:scale-110"
+                  className="object-contain p-4 transition-transform duration-300 hover:scale-110"
                 />
                 <Badge className="absolute left-3 top-3 bg-red-500 hover:bg-red-600">{deal.discount} OFF</Badge>
                 <Badge className="absolute right-3 top-3" variant="secondary">

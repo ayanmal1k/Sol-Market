@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Facebook, Instagram, Twitter } from "lucide-react"
+import { Twitter } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -25,18 +25,6 @@ export default function Footer() {
                   <span className="sr-only">Twitter</span>
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon" asChild>
-                <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="h-5 w-5" />
-                  <span className="sr-only">Instagram</span>
-                </Link>
-              </Button>
-              <Button variant="ghost" size="icon" asChild>
-                <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                  <Facebook className="h-5 w-5" />
-                  <span className="sr-only">Facebook</span>
-                </Link>
-              </Button>
             </div>
           </div>
 
@@ -44,24 +32,32 @@ export default function Footer() {
             <h3 className="mb-4 text-lg font-semibold">Popular Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/subscription/netflix" className="text-muted-foreground hover:text-foreground">
-                  Netflix Premium
-                </Link>
+                <Button variant="link" className="h-auto p-0" asChild>
+                  <Link href="/subscription/netflix-premium" className="text-muted-foreground hover:text-foreground">
+                    Netflix Premium
+                  </Link>
+                </Button>
               </li>
               <li>
-                <Link href="/subscription/spotify" className="text-muted-foreground hover:text-foreground">
-                  Spotify Premium
-                </Link>
+                <Button variant="link" className="h-auto p-0" asChild>
+                  <Link href="/subscription/spotify-premium" className="text-muted-foreground hover:text-foreground">
+                    Spotify Premium
+                  </Link>
+                </Button>
               </li>
               <li>
-                <Link href="/subscription/adobe" className="text-muted-foreground hover:text-foreground">
-                  Adobe Creative Cloud
-                </Link>
+                <Button variant="link" className="h-auto p-0" asChild>
+                  <Link href="/subscription/adobe-creative-cloud" className="text-muted-foreground hover:text-foreground">
+                    Adobe Creative Cloud
+                  </Link>
+                </Button>
               </li>
               <li>
-                <Link href="/subscription/disney" className="text-muted-foreground hover:text-foreground">
-                  Disney Plus
-                </Link>
+                <Button variant="link" className="h-auto p-0" asChild>
+                  <Link href="/subscription/disney-plus" className="text-muted-foreground hover:text-foreground">
+                    Disney Plus
+                  </Link>
+                </Button>
               </li>
             </ul>
           </div>

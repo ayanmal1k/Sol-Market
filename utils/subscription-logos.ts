@@ -67,6 +67,18 @@ export function getSubscriptionLogo(provider: string, name: string): string {
   if (providerLower.includes("deezer") || nameLower.includes("deezer")) {
     return "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zip-blob/deezer-r9eNXNptZFivitf2yL3FjhrMcKwAeM.png"
   }
+  // NordVPN
+  if (providerLower.includes("nord") || nameLower.includes("nordvpn")) {
+    return "https://img.logo.dev/nordvpn.com?token=pk_HA1dmfXUTmyxrzcZoCroPw&retina=true"
+  }
+  if (providerLower.includes("playstation") || nameLower.includes("playstation")) {
+    return "https://img.logo.dev/playstation.com?token=pk_HA1dmfXUTmyxrzcZoCroPw&retina=true"
+  }
+
+  // ExpressVPN
+  if (providerLower.includes("express") || nameLower.includes("expressvpn")) {
+    return "https://img.logo.dev/expressvpn.com?token=pk_HA1dmfXUTmyxrzcZoCroPw&retina=true"
+  }
 
   // Notion
   if (providerLower.includes("notion") || nameLower.includes("notion")) {
