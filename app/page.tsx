@@ -11,7 +11,9 @@ import ScrollReveal from "@/components/scroll-reveal"
 import ServiceStats from "@/components/service-stats"
 import WalletInfo from "@/components/wallet-info"
 import ComingSoonDeals from "@/components/coming-soon-deals"
+import TokenomicsTransparency from "@/components/tokenomics-transparency"
 import { getSubscriptionLogo } from "@/utils/subscription-logos"
+import HomeFAQ from "@/components/home-faq"
 
 export default function Home() {
   const subscriptions = [
@@ -233,52 +235,8 @@ export default function Home() {
         {/* Service Stats Section */}
         <ServiceStats />
 
-        {/* Features Section */}
-        <section className="container py-16">
-          <div className="mb-12 text-center reveal">
-            <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
-              <Shield className="mr-1 h-3 w-3" />
-              Why Choose Us
-            </Badge>
-            <h2 className="mb-4 text-3xl font-bold tracking-tight">
-              <Shield className="mr-2 inline-block h-8 w-8 text-primary" />
-              Platform Features
-            </h2>
-            <p className="mx-auto max-w-2xl text-muted-foreground">
-              Experience the best in crypto-powered subscription marketplace
-            </p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            <Card className="text-center reveal">
-              <CardContent className="p-6">
-                <Shield className="h-12 w-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-xl font-semibold mb-2">Secure & Instant</h3>
-                <p className="text-muted-foreground">
-                  All transactions are secured by Solana blockchain. Get your subscription details instantly after
-                  payment.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="text-center reveal">
-              <CardContent className="p-6">
-                <DollarSign className="h-12 w-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-xl font-semibold mb-2">Best Prices</h3>
-                <p className="text-muted-foreground">
-                  Save up to 50% on premium subscriptions. We offer the most competitive prices in the market.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="text-center reveal">
-              <CardContent className="p-6">
-                <Zap className="h-12 w-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
-                <p className="text-muted-foreground">
-                  Our dedicated support team is available round the clock to help you with any issues.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
+        {/* Tokenomics Transparency Section */}
+        <TokenomicsTransparency />
 
         {/* Trending Subscriptions */}
         <section className="container py-16">
@@ -366,6 +324,9 @@ export default function Home() {
 
         {/* Newsletter */}
         <Newsletter />
+
+        {/* FAQ Section */}
+        <HomeFAQ />
       </div>
     </>
   )
