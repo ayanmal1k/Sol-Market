@@ -5,13 +5,12 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Clock, FlameIcon as Fire, Sparkles, TrendingUp, Shield, Zap, DollarSign } from "lucide-react"
-import FeaturedDeals from "@/components/featured-deals"
 import HowItWorks from "@/components/how-it-works"
 import Newsletter from "@/components/newsletter"
 import ScrollReveal from "@/components/scroll-reveal"
 import ServiceStats from "@/components/service-stats"
-import SubscriptionComparison from "@/components/subscription-comparison"
 import WalletInfo from "@/components/wallet-info"
+import ComingSoonDeals from "@/components/coming-soon-deals"
 import { getSubscriptionLogo } from "@/utils/subscription-logos"
 
 export default function Home() {
@@ -128,6 +127,100 @@ export default function Home() {
             </div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
+        </section>
+
+        {/* Launch Announcement Banner */}
+        <section className="container">
+          <div className="relative overflow-hidden rounded-lg border border-primary/20 bg-primary/5 p-6 my-8 animate-pulse-slow">
+            <div className="absolute -right-20 -top-20 h-[200px] w-[200px] rounded-full bg-primary/10 blur-3xl"></div>
+            <div className="absolute -bottom-20 -left-20 h-[200px] w-[200px] rounded-full bg-primary/10 blur-3xl"></div>
+            <div className="relative flex flex-col items-center justify-center text-center gap-4">
+              <Badge className="animate-bounce-slow bg-primary text-primary-foreground">
+                Coming Soon
+              </Badge>
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                Service Ready for Launch!
+              </h2>
+              <p className="max-w-2xl text-muted-foreground">
+                Our platform is fully developed and will go live{" "}
+                <span className="font-semibold text-primary">24 hours after token launch</span>. Get ready to access
+                premium subscriptions with $SOL!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Holder Rewards Section */}
+        <section className="container py-16 relative overflow-hidden">
+          {/* Animated background coins */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="animate-float absolute top-10 left-[10%] text-yellow-500 opacity-20">
+              <DollarSign className="h-16 w-16" />
+            </div>
+            <div className="animate-float-delayed absolute top-20 right-[15%] text-yellow-500 opacity-20">
+              <DollarSign className="h-20 w-20" />
+            </div>
+            <div className="animate-float-slow absolute bottom-10 left-[20%] text-yellow-500 opacity-20">
+              <DollarSign className="h-24 w-24" />
+            </div>
+            <div className="animate-float absolute bottom-20 right-[25%] text-yellow-500 opacity-20">
+              <DollarSign className="h-16 w-16" />
+            </div>
+          </div>
+
+          <div className="mb-12 text-center reveal">
+            <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
+              <Sparkles className="mr-1 h-3 w-3" />
+              Exclusive Benefit
+            </Badge>
+            <h2 className="text-4xl font-bold tracking-tight mb-6">
+              <span className="bg-gradient-to-r from-yellow-500 to-yellow-200 text-transparent bg-clip-text">
+                Holder Rewards Program
+              </span>
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl text-muted-foreground mb-8">
+              Hold just 0.01% of the total token supply and get amazing benefits!
+            </p>
+          </div>
+
+          <Card className="relative overflow-hidden border-2 border-primary/20 reveal">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent"></div>
+            <CardContent className="p-8">
+              <div className="grid gap-8 md:grid-cols-2 items-center">
+                <div className="space-y-4">
+                  <Badge variant="secondary" className="px-3 py-1 text-lg">
+                    Monthly Reward
+                  </Badge>
+                  <h3 className="text-3xl font-bold">Free YouTube Premium</h3>
+                  <p className="text-muted-foreground text-lg">
+                    As a token holder with minimum 0.01% supply, you'll receive:
+                  </p>
+                  <ul className="space-y-3 text-lg">
+                    <li className="flex items-center">
+                      <Sparkles className="h-5 w-5 mr-2 text-yellow-500" />
+                      Monthly YouTube Premium subscription
+                    </li>
+                    <li className="flex items-center">
+                      <Clock className="h-5 w-5 mr-2 text-yellow-500" />
+                      Auto-renewed while holding tokens
+                    </li>
+                    <li className="flex items-center">
+                      <TrendingUp className="h-5 w-5 mr-2 text-yellow-500" />
+                      More rewards coming soon
+                    </li>
+                  </ul>
+                </div>
+                <div className="relative h-64 md:h-full min-h-[300px]">
+                  <Image
+                    src={getSubscriptionLogo("YouTube", "YouTube Premium") || "/placeholder.svg"}
+                    alt="YouTube Premium"
+                    fill
+                    className="object-contain p-8 animate-pulse-slow"
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </section>
 
         {/* Wallet Info Section */}
@@ -265,11 +358,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Featured Deals */}
-        <FeaturedDeals />
-
-        {/* Subscription Comparison Tool */}
-        <SubscriptionComparison />
+        {/* Coming Soon Deals Section */}
+        <ComingSoonDeals />
 
         {/* How It Works */}
         <HowItWorks />

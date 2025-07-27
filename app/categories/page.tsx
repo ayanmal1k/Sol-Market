@@ -10,43 +10,37 @@ export default function CategoriesPage() {
     {
       id: "streaming",
       name: "Streaming Services",
-      description: "Netflix, Disney+, YouTube Premium, HBO Max, and Paramount Plus at discounted prices.",
-      count: 5,
+      description: "Netflix, Disney+, YouTube Premium, and more services coming soon.",
+      count: 3,
       image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=400&h=300&fit=crop",
-      popular: ["Netflix Premium", "Disney Plus", "YouTube Premium", "HBO Max"],
+      popular: ["Netflix Premium", "Disney Plus", "YouTube Premium"],
     },
     {
       id: "music",
       name: "Music Services",
-      description: "Spotify, Apple Music, Tidal, and Deezer music streaming services.",
-      count: 4,
-      image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=300&fit=crop",
-      popular: ["Spotify Premium", "Apple Music", "Tidal HiFi", "Deezer Premium"],
+      description: "Spotify Premium and more music streaming services coming soon.",
+      count: 1,
+      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=300&fit=crop",
+      popular: ["Spotify Premium"],
     },
     {
       id: "productivity",
       name: "Productivity Tools",
-      description: "Microsoft Office, Notion, Grammarly, Slack, Zoom, and other productivity applications.",
-      count: 10,
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=300&fit=crop",
-      popular: ["Microsoft Office 365", "Notion Pro", "Grammarly Premium", "Slack Pro"],
+      description: "Adobe Creative Cloud and more tools coming soon.",
+      count: 1,
+      image: "https://images.unsplash.com/photo-1497493292307-31c376b6e479?w=400&h=300&fit=crop",
+      popular: ["Adobe Creative Cloud"],
     },
-    {
-      id: "design",
-      name: "Design & Creative",
-      description: "Adobe Creative Cloud, Canva Pro, Figma, and other design tools for creators.",
-      count: 3,
-      image: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=300&fit=crop",
-      popular: ["Adobe Creative Cloud", "Canva Pro", "Figma Professional"],
-    },
+    /* More categories to be added in future updates:
     {
       id: "shopping",
       name: "Shopping Services",
-      description: "Amazon Prime with free shipping, Prime Video, and exclusive deals.",
+      description: "Amazon Prime and other shopping subscriptions.",
       count: 1,
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=400&h=300&fit=crop",
       popular: ["Amazon Prime"],
     },
+    */
   ]
 
   return (

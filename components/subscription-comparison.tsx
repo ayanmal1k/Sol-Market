@@ -23,7 +23,6 @@ interface Subscription {
 
 export default function SubscriptionComparison() {
   const [selectedSubs, setSelectedSubs] = useState<string[]>([])
-
   const subscriptions: Subscription[] = [
     {
       id: "netflix-premium",
@@ -37,15 +36,37 @@ export default function SubscriptionComparison() {
       discount: "42%",
     },
     {
+      id: "disney-plus",
+      name: "Disney Plus",
+      provider: "Disney",
+      price: "4.99",
+      originalPrice: "7.99",
+      duration: "1 Month",
+      features: ["4K HDR", "4 Screens", "No Ads", "Download", "Disney Originals"],
+      category: "Streaming",
+      discount: "38%",
+    },
+    {
       id: "spotify-premium",
       name: "Spotify Premium",
       provider: "Spotify",
       price: "6.49",
       originalPrice: "9.99",
       duration: "1 Month",
-      features: ["Ad-Free", "Offline Download", "High Quality", "Unlimited Skips", "Podcasts"],
+      features: ["No Ads", "Offline Mode", "High Quality", "Any Song", "Group Session"],
       category: "Music",
       discount: "35%",
+    },
+    {
+      id: "youtube-premium",
+      name: "YouTube Premium",
+      provider: "YouTube",
+      price: "7.99",
+      originalPrice: "11.99",
+      duration: "1 Month",
+      features: ["No Ads", "Background Play", "Downloads", "Premium Music", "4K Quality"],
+      category: "Streaming",
+      discount: "33%",
     },
     {
       id: "adobe-creative-cloud",
@@ -54,21 +75,24 @@ export default function SubscriptionComparison() {
       price: "32.99",
       originalPrice: "52.99",
       duration: "1 Month",
-      features: ["All Apps", "Cloud Storage", "Fonts", "Stock Images", "Tutorials"],
-      category: "Design",
+      features: ["All Apps", "100GB Storage", "Adobe Fonts", "Portfolio", "Templates"],
+      category: "Productivity",
       discount: "38%",
     },
+    /* More subscriptions to be added in future updates:
     {
-      id: "disney-plus",
-      name: "Disney Plus",
-      provider: "Disney",
-      price: "4.99",
-      originalPrice: "7.99",
+      id: "hbo-max",
+      name: "HBO Max",
+      provider: "HBO",
+      price: "9.99",
+      originalPrice: "15.99",
       duration: "1 Month",
-      features: ["4K Content", "Multiple Profiles", "Download", "Marvel & Star Wars", "Family Safe"],
+      features: ["4K HDR", "3 Screens", "No Ads", "Warner Bros", "Max Originals"],
       category: "Streaming",
       discount: "38%",
     },
+    etc...
+    */
   ]
 
   const handleSelectSubscription = (subId: string) => {

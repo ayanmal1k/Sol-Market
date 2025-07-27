@@ -16,7 +16,7 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
 
   // Define all subscriptions with their categories
   const allSubscriptions = [
-    // Streaming (5)
+    // Streaming (3)
     {
       id: "netflix-premium",
       name: "Netflix Premium",
@@ -31,10 +31,10 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
       id: "disney-plus",
       name: "Disney Plus",
       provider: "Disney",
-      duration: "6 Months",
-      originalPrice: "47.94",
-      discountPrice: "28.99",
-      discount: "40%",
+      duration: "1 Month",
+      originalPrice: "7.99",
+      discountPrice: "4.99",
+      discount: "38%",
       category: "streaming",
     },
     {
@@ -47,169 +47,18 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
       discount: "33%",
       category: "streaming",
     },
-    {
-      id: "hbo-max",
-      name: "HBO Max",
-      provider: "HBO",
-      duration: "3 Months",
-      originalPrice: "44.97",
-      discountPrice: "29.99",
-      discount: "33%",
-      category: "streaming",
-    },
-    {
-      id: "paramount-plus",
-      name: "Paramount Plus",
-      provider: "Paramount",
-      duration: "3 Months",
-      originalPrice: "29.97",
-      discountPrice: "19.99",
-      discount: "33%",
-      category: "streaming",
-    },
-    // Music (4)
+    // Music (1)
     {
       id: "spotify-premium",
       name: "Spotify Premium",
       provider: "Spotify",
-      duration: "3 Months",
-      originalPrice: "29.97",
-      discountPrice: "18.50",
-      discount: "38%",
-      category: "music",
-    },
-    {
-      id: "apple-music",
-      name: "Apple Music",
-      provider: "Apple",
-      duration: "6 Months",
-      originalPrice: "59.94",
-      discountPrice: "39.99",
-      discount: "33%",
-      category: "music",
-    },
-    {
-      id: "tidal-hifi",
-      name: "Tidal HiFi",
-      provider: "Tidal",
-      duration: "3 Months",
-      originalPrice: "59.97",
-      discountPrice: "39.99",
-      discount: "33%",
-      category: "music",
-    },
-    {
-      id: "deezer-premium",
-      name: "Deezer Premium",
-      provider: "Deezer",
-      duration: "6 Months",
-      originalPrice: "59.94",
-      discountPrice: "39.99",
-      discount: "33%",
-      category: "music",
-    },
-    // Productivity (10)
-    {
-      id: "microsoft-office-365",
-      name: "Microsoft Office 365",
-      provider: "Microsoft",
-      duration: "1 Year",
-      originalPrice: "99.99",
-      discountPrice: "59.99",
-      discount: "40%",
-      category: "productivity",
-    },
-    {
-      id: "notion-pro",
-      name: "Notion Pro",
-      provider: "Notion",
-      duration: "1 Year",
-      originalPrice: "96.00",
-      discountPrice: "59.99",
-      discount: "38%",
-      category: "productivity",
-    },
-    {
-      id: "grammarly-premium",
-      name: "Grammarly Premium",
-      provider: "Grammarly",
-      duration: "1 Year",
-      originalPrice: "144.00",
-      discountPrice: "89.99",
-      discount: "38%",
-      category: "productivity",
-    },
-    {
-      id: "slack-pro",
-      name: "Slack Pro",
-      provider: "Slack",
       duration: "1 Month",
-      originalPrice: "8.75",
-      discountPrice: "5.99",
-      discount: "32%",
-      category: "productivity",
-    },
-    {
-      id: "zoom-pro",
-      name: "Zoom Pro",
-      provider: "Zoom",
-      duration: "1 Month",
-      originalPrice: "14.99",
-      discountPrice: "9.99",
-      discount: "33%",
-      category: "productivity",
-    },
-    {
-      id: "evernote-premium",
-      name: "Evernote Premium",
-      provider: "Evernote",
-      duration: "1 Year",
-      originalPrice: "84.99",
-      discountPrice: "54.99",
+      originalPrice: "9.99",
+      discountPrice: "6.49",
       discount: "35%",
-      category: "productivity",
+      category: "music",
     },
-    {
-      id: "trello-premium",
-      name: "Trello Premium",
-      provider: "Trello",
-      duration: "1 Year",
-      originalPrice: "60.00",
-      discountPrice: "39.99",
-      discount: "33%",
-      category: "productivity",
-    },
-    {
-      id: "asana-premium",
-      name: "Asana Premium",
-      provider: "Asana",
-      duration: "1 Year",
-      originalPrice: "119.88",
-      discountPrice: "79.99",
-      discount: "33%",
-      category: "productivity",
-    },
-    {
-      id: "monday-basic",
-      name: "Monday.com Basic",
-      provider: "Monday",
-      duration: "1 Month",
-      originalPrice: "8.00",
-      discountPrice: "5.99",
-      discount: "25%",
-      category: "productivity",
-    },
-    {
-      id: "clickup-unlimited",
-      name: "ClickUp Unlimited",
-      provider: "ClickUp",
-      duration: "1 Year",
-      originalPrice: "60.00",
-      discountPrice: "39.99",
-      discount: "33%",
-      category: "productivity",
-    },
-    // Design (3)
+    // Productivity (1)
     {
       id: "adobe-creative-cloud",
       name: "Adobe Creative Cloud",
@@ -218,49 +67,40 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
       originalPrice: "52.99",
       discountPrice: "32.99",
       discount: "38%",
-      category: "design",
+      category: "productivity",
     },
+    /* More services to be added in future updates:
     {
-      id: "canva-pro",
-      name: "Canva Pro",
-      provider: "Canva",
-      duration: "1 Year",
-      originalPrice: "119.99",
-      discountPrice: "69.99",
-      discount: "42%",
-      category: "design",
-    },
-    {
-      id: "figma-professional",
-      name: "Figma Professional",
-      provider: "Figma",
+      id: "hbo-max",
+      name: "HBO Max",
+      provider: "HBO",
       duration: "1 Month",
-      originalPrice: "12.00",
-      discountPrice: "7.99",
-      discount: "33%",
-      category: "design",
+      originalPrice: "15.99",
+      discountPrice: "9.99",
+      discount: "38%",
+      category: "streaming",
     },
-    // Shopping (1)
     {
       id: "amazon-prime",
       name: "Amazon Prime",
       provider: "Amazon",
-      duration: "1 Year",
-      originalPrice: "139.00",
-      discountPrice: "79.99",
-      discount: "42%",
+      duration: "1 Month",
+      originalPrice: "14.99",
+      discountPrice: "8.99",
+      discount: "40%",
       category: "shopping",
     },
+    etc...
+    */
   ]
 
   // Filter subscriptions by category
-  const categorySubscriptions = allSubscriptions.filter((sub) => sub.category === categoryId)
-
-  // Filter by search query
-  const filteredSubscriptions = categorySubscriptions.filter(
+  const filteredSubscriptions = allSubscriptions.filter(
     (sub) =>
-      sub.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      sub.provider.toLowerCase().includes(searchQuery.toLowerCase()),
+      sub.category === categoryId &&
+      (searchQuery === "" ||
+        sub.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        sub.provider.toLowerCase().includes(searchQuery.toLowerCase())),
   )
 
   // Get category info
@@ -268,8 +108,10 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
     streaming: { name: "Streaming Services", description: "Premium streaming platforms" },
     music: { name: "Music Services", description: "Music streaming platforms" },
     productivity: { name: "Productivity Tools", description: "Work and productivity applications" },
+    /* More categories to be added in future updates:
     design: { name: "Design & Creative", description: "Design and creative tools" },
     shopping: { name: "Shopping Services", description: "Shopping and e-commerce platforms" },
+    */
   }
 
   const currentCategory = categoryInfo[categoryId as keyof typeof categoryInfo] || {
@@ -293,7 +135,7 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
 
       <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div className="text-sm text-muted-foreground">
-          Showing {filteredSubscriptions.length} of {categorySubscriptions.length} subscriptions
+          Showing {filteredSubscriptions.length} of {filteredSubscriptions.length} subscriptions
         </div>
 
         <div className="relative flex-1 max-w-md">

@@ -2,7 +2,6 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import SubscriptionCalculator from "@/components/subscription-calculator"
 import { Sparkles, Shield, Zap, Users, Globe, Heart, Target, DollarSign, TrendingDown } from "lucide-react"
 
 export default function AboutPage() {
@@ -141,9 +140,6 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
-
-      {/* Calculator Section */}
-      <SubscriptionCalculator />
 
       {/* Values Section */}
       <section className="mb-16">

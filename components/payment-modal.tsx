@@ -109,6 +109,9 @@ export default function PaymentModal({ isOpen, onClose, subscription }: PaymentM
     return (
       <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Processing</DialogTitle>
+          </DialogHeader>
           <div className="flex flex-col items-center justify-center py-12">
             <div className="mb-4 h-12 w-12 animate-spin rounded-full border-4 border-primary border-t-transparent"></div>
             <h3 className="mb-2 text-lg font-semibold">Generating Payment Details</h3>
