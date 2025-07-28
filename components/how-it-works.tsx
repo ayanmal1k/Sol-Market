@@ -15,8 +15,8 @@ export default function HowItWorks() {
     },
     {
       icon: <Mail className="h-10 w-10 text-primary" />,
-      title: "Send Screenshot",
-      description: "Email a screenshot of your payment to our support team along with your email address.",
+      title: "Submit Email",
+      description: "Just submit your email address to receive your subscription credentials.",
     },
     {
       icon: <CheckCircle className="h-10 w-10 text-primary" />,
