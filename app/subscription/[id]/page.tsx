@@ -7,11 +7,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { Eye, Heart, Share2, Info, CheckCircle, Shield, Clock, Users } from "lucide-react"
-import PaymentModal from "@/components/payment-modal"
+import WaitlistModal from "@/components/waitlist-modal"
 import { getSubscriptionLogo } from "@/utils/subscription-logos"
 
 export default function SubscriptionDetailPage({ params }: { params: { id: string } }) {
-  const [isPaymentOpen, setIsPaymentOpen] = useState(false)
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false)
   const id = params.id
 
   // Generate subscription details based on ID
@@ -108,16 +108,16 @@ export default function SubscriptionDetailPage({ params }: { params: { id: strin
 
               <div className="flex items-center gap-2 mb-6">
                 <Clock className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">Limited time offer</span>
+                <span className="text-sm text-muted-foreground">{getRandomWaitlistCount()} in waitlist</span>
               </div>
 
-              <Button size="lg" className="w-full" onClick={() => setIsPaymentOpen(true)}>
-                Buy Now with SOL
+              <Button size="lg" className="w-full" onClick={() => setIsWaitlistOpen(true)}>
+                Join Waitlist
               </Button>
 
               <div className="mt-4 text-xs text-muted-foreground space-y-1">
-                <p>• Instant delivery after payment confirmation</p>
-                <p>• 30-day money-back guarantee</p>
+                <p>• Get notified when available</p>
+                <p>• Priority access when launched</p>
                 <p>• 24/7 customer support</p>
               </div>
             </CardContent>
@@ -185,14 +185,10 @@ export default function SubscriptionDetailPage({ params }: { params: { id: strin
         </div>
       </div>
 
-      <PaymentModal
-        isOpen={isPaymentOpen}
-        onClose={() => setIsPaymentOpen(false)}
-        subscription={{
-          name: subscriptionData.name,
-          price: subscriptionData.discountPrice,
-          solPrice: subscriptionData.solPrice,
-        }}
+      <WaitlistModal
+        isOpen={isWaitlistOpen}
+        onClose={() => setIsWaitlistOpen(false)}
+        subscriptionName={subscriptionData.name}
       />
     </div>
   )
@@ -1197,4 +1193,9 @@ function getSubscriptionById(id: string) {
       warranty: "30 Days Replacement",
     },
   }
+}
+
+// Mock function to return a random waitlist count
+function getRandomWaitlistCount() {
+  return Math.floor(Math.random() * 100) + 1 // 1 to 100
 }
