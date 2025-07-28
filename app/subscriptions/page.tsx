@@ -10,6 +10,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { Search, Clock } from "lucide-react"
 import { getSubscriptionLogo } from "@/utils/subscription-logos"
+import { getWaitlistCount } from "@/lib/utils"
 
 export default function SubscriptionsPage() {
   const [activeCategory, setActiveCategory] = useState("all")
@@ -420,10 +421,6 @@ export default function SubscriptionsPage() {
     setDisplayCount((prev) => prev + 12)
   }
 
-  const getRandomWaitlistCount = () => {
-    return Math.floor(Math.random() * (999 - 412 + 1)) + 412
-  }
-
   return (
     <div className="container py-12">
       <div className="mb-8">
@@ -487,7 +484,7 @@ export default function SubscriptionsPage() {
                 </div>
                 <div className="flex items-center gap-1 text-xs text-muted-foreground">
                   <Clock className="h-3 w-3" />
-                  <span>{getRandomWaitlistCount()} in waitlist</span>
+                  <span>{getWaitlistCount(sub.id)} in waitlist</span>
                 </div>
               </CardFooter>
             </Card>

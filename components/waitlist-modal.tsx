@@ -16,7 +16,6 @@ export default function WaitlistModal({ isOpen, onClose, subscriptionName }: Wai
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState("")
-  const [successMessage, setSuccessMessage] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -41,7 +40,6 @@ export default function WaitlistModal({ isOpen, onClose, subscriptionName }: Wai
         throw new Error(data.error || 'Failed to join waitlist')
       }
 
-      setSuccessMessage(data.message || 'Successfully joined the waitlist!')
       setIsSubmitted(true)
       setEmail("")
     } catch (error) {
@@ -55,7 +53,6 @@ export default function WaitlistModal({ isOpen, onClose, subscriptionName }: Wai
   const handleClose = () => {
     setIsSubmitted(false)
     setError("")
-    setSuccessMessage("")
     onClose()
   }
 
@@ -96,7 +93,7 @@ export default function WaitlistModal({ isOpen, onClose, subscriptionName }: Wai
             <div className="text-center space-y-2">
               <h3 className="font-semibold">Successfully Joined!</h3>
               <p className="text-muted-foreground text-sm">
-                {successMessage}
+                You have been added to the waitlist. We will notify you when {subscriptionName} becomes available.
               </p>
             </div>
             <Button onClick={handleClose} className="w-full">
