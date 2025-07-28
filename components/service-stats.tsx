@@ -143,7 +143,7 @@ export default function ServiceStats() {
     {
       icon: <Users className="h-8 w-8" />,
       title: "Active Users",
-      value: 10000,
+      value: 3000,
       suffix: "+",
       color: "hsl(280, 75%, 65%)", // Purple from gradient
       glowColor: "hsla(280, 75%, 65%, 0.3)",
