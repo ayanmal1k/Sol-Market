@@ -19,11 +19,29 @@ export default function WaitlistModal({ isOpen, onClose, subscriptionName }: Wai
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate API call with timeout
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setIsSubmitted(true)
-    setIsSubmitting(false)
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          subscriptionName,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to join waitlist')
+      }
+
+      setIsSubmitted(true)
+    } catch (error) {
+      console.error('Error joining waitlist:', error)
+      // Could add error state handling here
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
