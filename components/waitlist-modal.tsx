@@ -2,7 +2,8 @@ import { useState } from "react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Check } from "lucide-react"
+import { Check, AlertCircle } from "lucide-react"
+import { Alert, AlertDescription } from "@/components/ui/alert"
 
 interface WaitlistModalProps {
   isOpen: boolean
@@ -14,10 +15,13 @@ export default function WaitlistModal({ isOpen, onClose, subscriptionName }: Wai
   const [email, setEmail] = useState("")
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState("")
+  const [successMessage, setSuccessMessage] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError("")
     
     try {
       const response = await fetch('/api/waitlist', {
@@ -31,21 +35,32 @@ export default function WaitlistModal({ isOpen, onClose, subscriptionName }: Wai
         }),
       })
 
+      const data = await response.json()
+
       if (!response.ok) {
-        throw new Error('Failed to join waitlist')
+        throw new Error(data.error || 'Failed to join waitlist')
       }
 
+      setSuccessMessage(data.message || 'Successfully joined the waitlist!')
       setIsSubmitted(true)
+      setEmail("")
     } catch (error) {
       console.error('Error joining waitlist:', error)
-      // Could add error state handling here
+      setError(error instanceof Error ? error.message : 'Failed to join waitlist')
     } finally {
       setIsSubmitting(false)
     }
   }
 
+  const handleClose = () => {
+    setIsSubmitted(false)
+    setError("")
+    setSuccessMessage("")
+    onClose()
+  }
+
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+    <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Join the Waitlist</DialogTitle>
@@ -55,6 +70,12 @@ export default function WaitlistModal({ isOpen, onClose, subscriptionName }: Wai
             <div className="text-muted-foreground text-sm">
               Join the waitlist for {subscriptionName} to get notified when it becomes available.
             </div>
+            {error && (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
             <Input
               type="email"
               placeholder="Enter your email"
@@ -75,10 +96,10 @@ export default function WaitlistModal({ isOpen, onClose, subscriptionName }: Wai
             <div className="text-center space-y-2">
               <h3 className="font-semibold">Successfully Joined!</h3>
               <p className="text-muted-foreground text-sm">
-                You have been added to the waitlist. We will notify you when {subscriptionName} becomes available.
+                {successMessage}
               </p>
             </div>
-            <Button onClick={onClose} className="w-full">
+            <Button onClick={handleClose} className="w-full">
               Close
             </Button>
           </div>
