@@ -16,6 +16,8 @@ import { getSubscriptionLogo } from "@/utils/subscription-logos"
 import HomeFAQ from "@/components/home-faq"
 import CountdownTimer from "@/components/countdown-timer"
 import LiveMetrics from "@/components/live-metrics"
+import AboutSection from "@/components/about-section"
+import FeatureCards from "@/components/feature-cards"
 
 export default function Home() {
   const subscriptions = [
@@ -66,7 +68,7 @@ export default function Home() {
       <ScrollReveal />
       <div className="flex flex-col gap-16 pb-16">
         {/* Hero Section */}
-        <section className="hero-gradient relative overflow-hidden pt-16">
+        <section className="hero-gradient relative overflow-hidden pt-0">
           <div className="container relative z-10 grid gap-8 pb-16 pt-8 md:grid-cols-2 md:gap-12 md:pb-24 md:pt-16">
             <div className="flex flex-col justify-center gap-6">
               <Badge className="w-fit bg-primary/10 text-primary hover:bg-primary/20 animate-fade-in">
@@ -134,6 +136,9 @@ export default function Home() {
 
         {/* Live Metrics Section */}
         <LiveMetrics />
+
+        {/* About Section */}
+        <AboutSection />
 
         {/* Launch Announcement Banner */}
         <section className="container">
@@ -319,6 +324,9 @@ export default function Home() {
             </Button>
           </div>
         </section>
+
+        {/* Why $SCRIBE Features Section */}
+        <FeatureCards />
 
         {/* Coming Soon Deals Section */}
         <ComingSoonDeals />
