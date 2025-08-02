@@ -15,6 +15,7 @@ import TokenomicsTransparency from "@/components/tokenomics-transparency"
 import { getSubscriptionLogo } from "@/utils/subscription-logos"
 import HomeFAQ from "@/components/home-faq"
 import CountdownTimer from "@/components/countdown-timer"
+import LiveMetrics from "@/components/live-metrics"
 
 export default function Home() {
   const subscriptions = [
@@ -73,7 +74,7 @@ export default function Home() {
                 Premium subscriptions with crypto
               </Badge>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl animate-slide-in-left">
-                Buy <span className="text-primary">Premium</span> Subscriptions Directly with $SOL or $SOLSCRIBE
+                Buy <span className="text-primary">Premium</span> Subscriptions Directly with $SOL or $SCRIBE
               </h1>
               <p className="text-xl text-muted-foreground animate-slide-in-left delay-200">
                 Pay with SOL / USDC or directly with our own Native Token $SCRIBE to get Discounts upto 75%.
@@ -130,6 +131,9 @@ export default function Home() {
 
         {/* Countdown Timer */}
         <CountdownTimer />
+
+        {/* Live Metrics Section */}
+        <LiveMetrics />
 
         {/* Launch Announcement Banner */}
         <section className="container">
