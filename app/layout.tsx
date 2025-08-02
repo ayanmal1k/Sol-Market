@@ -55,6 +55,7 @@ export default function RootLayout({
         <link rel="icon" href="/solistryx-logo-clean.png" type="image/png" />
         <link rel="apple-touch-icon" href="/solistryx-logo-clean.png" />
         <link rel="shortcut icon" href="/solistryx-logo-clean.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
       </head>
       <body className={`${bricolage.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>

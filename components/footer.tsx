@@ -20,9 +20,15 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <Button variant="ghost" size="icon" asChild>
-                <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
+                <Link href="https://t.me/solscription" target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-telegram h-5 w-5"></i>
+                  <span className="sr-only">Telegram</span>
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <Link href="https://twitter.com/solscription" target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-x-twitter h-5 w-5"></i>
+                  <span className="sr-only">X (Twitter)</span>
                 </Link>
               </Button>
             </div>

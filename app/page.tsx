@@ -14,6 +14,7 @@ import ComingSoonDeals from "@/components/coming-soon-deals"
 import TokenomicsTransparency from "@/components/tokenomics-transparency"
 import { getSubscriptionLogo } from "@/utils/subscription-logos"
 import HomeFAQ from "@/components/home-faq"
+import CountdownTimer from "@/components/countdown-timer"
 
 export default function Home() {
   const subscriptions = [
@@ -72,32 +73,28 @@ export default function Home() {
                 Premium subscriptions with crypto
               </Badge>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl animate-slide-in-left">
-                Buy <span className="text-primary">Premium</span> Subscriptions with $SOL or $SOLSCRIBE
+                Buy <span className="text-primary">Premium</span> Subscriptions Directly with $SOL or $SOLSCRIBE
               </h1>
               <p className="text-xl text-muted-foreground animate-slide-in-left delay-200">
-                Get Netflix, Spotify, Adobe, and more at discounted prices. Pay with SOL and save up to 50% on your
-                favorite platforms.
+                Pay with SOL / USDC or directly with our own Native Token $SCRIBE to get Discounts upto 75%.
               </p>
               <div className="flex flex-wrap gap-4 animate-fade-in delay-300">
                 <Button size="lg" asChild className="animate-bounce-slow">
-                  <Link href="/subscriptions">Browse Subscriptions</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link href="/deals">View Deals</Link>
+                  <Link href="/subscriptions">Join Our Waitlist</Link>
                 </Button>
               </div>
               <div className="flex flex-wrap gap-8 animate-fade-in delay-400">
                 <div>
-                  <p className="text-3xl font-bold">40+</p>
-                  <p className="text-sm text-muted-foreground">Subscriptions</p>
+                  <p className="text-3xl font-bold">45+</p>
+                  <p className="text-sm text-muted-foreground">Upcoming Subscriptions</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold">3500+</p>
+                  <p className="text-sm text-muted-foreground">People in Waitlist</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold">50%</p>
                   <p className="text-sm text-muted-foreground">Avg. Savings</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold">10K+</p>
-                  <p className="text-sm text-muted-foreground">Happy Customers</p>
                 </div>
               </div>
             </div>
@@ -130,6 +127,9 @@ export default function Home() {
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
         </section>
+
+        {/* Countdown Timer */}
+        <CountdownTimer />
 
         {/* Launch Announcement Banner */}
         <section className="container">
@@ -233,7 +233,7 @@ export default function Home() {
         </section>
 
         {/* Service Stats Section */}
-        <ServiceStats />
+        {/* <ServiceStats /> */}
 
         {/* Tokenomics Transparency Section */}
         <TokenomicsTransparency />

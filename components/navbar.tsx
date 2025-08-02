@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
-import { Menu, Search, Wallet, Sun, Moon, Heart, ChevronDown } from "lucide-react"
+import { Menu, Search, Wallet, Sun, Moon, Heart, ChevronDown, TwitterIcon, MessageCircle } from "lucide-react"
 import { ModeToggle } from "./mode-toggle"
 import { useTheme } from "next-themes"
 import { useWallet } from "./wallet-provider"
@@ -91,6 +91,26 @@ export default function Navbar() {
                     Wishlist
                   </Link>
                 </nav>
+                {/* Social Links for Mobile */}
+                <div className="flex items-center gap-2 mt-4">
+                  <Link href="/whitepaper.pdf" target="_blank" className="text-lg font-medium transition-colors hover:text-primary">
+                    Whitepaper
+                  </Link>
+                </div>
+                <div className="flex items-center gap-2 mt-2">
+                  <Button variant="ghost" size="icon" asChild>
+                    <Link href="https://t.me/solscription" target="_blank" rel="noopener noreferrer">
+                      <i className="fa-brands fa-telegram h-5 w-5"></i>
+                      <span className="sr-only">Telegram</span>
+                    </Link>
+                  </Button>
+                  <Button variant="ghost" size="icon" asChild>
+                    <Link href="https://twitter.com/solscription" target="_blank" rel="noopener noreferrer">
+                      <i className="fa-brands fa-x-twitter h-5 w-5"></i>
+                      <span className="sr-only">X (Twitter)</span>
+                    </Link>
+                  </Button>
+                </div>
                 <div className="mt-6 flex items-center gap-2">
                   <span className="text-sm font-medium">Theme:</span>
                   <Button
@@ -161,6 +181,34 @@ export default function Navbar() {
                     </Link>
                   </NavigationMenuItem>
                 ))}
+                <NavigationMenuItem>
+                  <Link href="/whitepaper.pdf" target="_blank" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "text-muted-foreground"
+                      )}
+                    >
+                      Whitepaper
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <div className="flex items-center gap-2 px-4">
+                    <Button variant="ghost" size="icon" asChild>
+                      <Link href="https://t.me/solscription" target="_blank" rel="noopener noreferrer">
+                        <i className="fa-brands fa-telegram h-5 w-5"></i>
+                        <span className="sr-only">Telegram</span>
+                      </Link>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                      <Link href="https://twitter.com/solscription" target="_blank" rel="noopener noreferrer">
+                        <i className="fa-brands fa-x-twitter h-5 w-5"></i>
+                        <span className="sr-only">X (Twitter)</span>
+                      </Link>
+                    </Button>
+                  </div>
+                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
