@@ -67,7 +67,7 @@ export default function Home() {
   return (
     <>
       <ScrollReveal />
-      <div className="flex flex-col gap-16 pb-16">
+      <div className="flex flex-col gap-8 pb-8">
         {/* Hero Section */}
         <section className="hero-gradient relative overflow-hidden pt-0">
           <div className="container relative z-10 grid gap-8 pb-16 pt-8 md:grid-cols-2 md:gap-12 md:pb-24 md:pt-16">
@@ -143,7 +143,7 @@ export default function Home() {
 
         {/* Launch Announcement Banner */}
         <section className="container">
-          <div className="relative overflow-hidden rounded-lg border border-primary/20 bg-primary/5 p-6 my-8 animate-pulse-slow">
+          <div className="relative overflow-hidden rounded-lg border border-primary/20 bg-primary/5 p-6 my-4 animate-pulse-slow">
             <div className="absolute -right-20 -top-20 h-[200px] w-[200px] rounded-full bg-primary/10 blur-3xl"></div>
             <div className="absolute -bottom-20 -left-20 h-[200px] w-[200px] rounded-full bg-primary/10 blur-3xl"></div>
             <div className="relative flex flex-col items-center justify-center text-center gap-4">
@@ -163,7 +163,7 @@ export default function Home() {
         </section>
 
         {/* Holder Rewards Section */}
-        <section className="container py-16 relative overflow-hidden">
+        <section className="container py-8 relative overflow-hidden">
           {/* Animated background coins */}
           <div className="absolute inset-0 pointer-events-none">
             <div className="animate-float absolute top-10 left-[10%] text-yellow-500 opacity-20">
@@ -249,7 +249,7 @@ export default function Home() {
         <TokenomicsTransparency />
 
         {/* Trending Subscriptions */}
-        <section className="container py-16">
+        <section className="container py-8">
           <div className="mb-8 flex flex-wrap items-center justify-between gap-4 reveal">
             <div>
               <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
