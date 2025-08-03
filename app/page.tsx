@@ -12,6 +12,7 @@ import ServiceStats from "@/components/service-stats"
 import WalletInfo from "@/components/wallet-info"
 import ComingSoonDeals from "@/components/coming-soon-deals"
 import TokenomicsTransparency from "@/components/tokenomics-transparency"
+import RoadmapSection from "@/components/roadmap-section"
 import { getSubscriptionLogo } from "@/utils/subscription-logos"
 import HomeFAQ from "@/components/home-faq"
 import CountdownTimer from "@/components/countdown-timer"
@@ -333,6 +334,9 @@ export default function Home() {
 
         {/* How It Works */}
         <HowItWorks />
+
+        {/* Roadmap Section */}
+        <RoadmapSection />
 
         {/* Newsletter */}
         <Newsletter />
