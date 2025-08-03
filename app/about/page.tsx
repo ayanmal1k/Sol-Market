@@ -2,14 +2,13 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Sparkles, Shield, Zap, Users, Globe, Heart, Target, DollarSign, TrendingDown } from "lucide-react"
+import { Sparkles, Shield, Zap, Users, Globe, Heart, Target, DollarSign, TrendingDown, TrendingUp } from "lucide-react" 
 
 export default function AboutPage() {
   const stats = [
-    { label: "Active Subscriptions", value: "500+", icon: <DollarSign className="h-6 w-6" /> },
-    { label: "Happy Customers", value: "10K+", icon: <Users className="h-6 w-6" /> },
-    { label: "Average Savings", value: "45%", icon: <TrendingDown className="h-6 w-6" /> },
-    { label: "Countries Served", value: "50+", icon: <Globe className="h-6 w-6" /> },
+    { label: "Monthly Growth", value: "250%", icon: <TrendingUp className="h-6 w-6" /> },
+    { label: "Subscriptions Available", value: "40+", icon: <DollarSign className="h-6 w-6" /> },
+    { label: "Active Users", value: "3000+", icon: <Users className="h-6 w-6" /> },
   ]
 
   const features = [
@@ -61,7 +60,7 @@ export default function AboutPage() {
 
       {/* Stats Section */}
       <section className="mb-16">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto max-w-4xl grid gap-6 sm:grid-cols-3">
           {stats.map((stat, index) => (
             <Card key={index} className="text-center">
               <CardContent className="p-6">

@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { Eye, Heart, Share2, Info, CheckCircle, Shield, Clock, Users } from "lucide-react"
 import WaitlistModal from "@/components/waitlist-modal"
+import TGENotificationModal from "@/components/tge-notification-modal"
 import { getSubscriptionLogo } from "@/utils/subscription-logos"
 import { getWaitlistCount } from "@/lib/utils"
 
@@ -221,6 +222,7 @@ export default function SubscriptionDetailPage({ params }: { params: { id: strin
         onClose={() => setIsWaitlistOpen(false)}
         subscriptionName={subscriptionData.name}
       />
+      <TGENotificationModal subscriptionName={subscriptionData.name} />
     </div>
   )
 }
