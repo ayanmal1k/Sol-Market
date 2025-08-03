@@ -67,16 +67,16 @@ export default function Home() {
   return (
     <>
       <ScrollReveal />
-      <div className="flex flex-col gap-8 pb-8">
+      <div className="flex flex-col gap-8 pb-8 overflow-x-hidden">
         {/* Hero Section */}
         <section className="hero-gradient relative overflow-hidden pt-0">
-          <div className="container relative z-10 grid gap-8 pb-16 pt-8 md:grid-cols-2 md:gap-12 md:pb-24 md:pt-16">
-            <div className="flex flex-col justify-center gap-6">
+          <div className="container relative z-10 grid gap-6 pb-12 pt-6 md:gap-8 md:pb-16 md:pt-8 lg:grid-cols-2 lg:gap-12 lg:pb-24 lg:pt-16">
+            <div className="flex flex-col justify-center gap-4 md:gap-6">
               <Badge className="w-fit bg-primary/10 text-primary hover:bg-primary/20 animate-fade-in">
                 <Sparkles className="mr-1 h-3 w-3 animate-pulse" />
                 Premium subscriptions with crypto
               </Badge>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl animate-slide-in-left">
+              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl animate-slide-in-left">
                 Buy <span className="text-primary">Premium</span> Subscriptions Directly with $SOL or $SCRIBE
               </h1>
               <p className="text-xl text-muted-foreground animate-slide-in-left delay-200">
@@ -163,10 +163,10 @@ export default function Home() {
         </section>
 
         {/* Holder Rewards Section */}
-        <section className="container py-8 relative overflow-hidden">
+        <section className="container py-8 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           {/* Animated background coins */}
           <div className="absolute inset-0 pointer-events-none">
-            <div className="animate-float absolute top-10 left-[10%] text-yellow-500 opacity-20">
+            <div className="animate-float absolute top-10 left-[10%] text-yellow-500 opacity-20 hidden sm:block">
               <DollarSign className="h-16 w-16" />
             </div>
             <div className="animate-float-delayed absolute top-20 right-[15%] text-yellow-500 opacity-20">

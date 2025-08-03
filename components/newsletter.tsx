@@ -21,39 +21,29 @@ export default function Newsletter() {
   }
 
   return (
-    <section className="bg-primary/5">
-      <div className="container py-16">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-4 flex justify-center reveal">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 animate-bounce-slow">
-              <Mail className="h-6 w-6 text-primary" />
-            </div>
+    <section className="container py-8 md:py-12">
+      <div className="relative overflow-hidden rounded-lg bg-primary/5 px-4 py-12 md:px-6">
+        <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-primary/10 to-transparent" />
+        <div className="relative grid gap-4 md:grid-cols-2 md:gap-8">
+          <div>
+            <h2 className="mb-2 text-2xl font-bold md:text-3xl">Stay Updated</h2>
+            <p className="text-muted-foreground">
+              Get notified about new subscriptions and exclusive deals.
+            </p>
           </div>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl reveal">Stay Updated</h2>
-          <p className="mb-8 text-muted-foreground reveal">
-            Subscribe to our newsletter to get notified about new deals, platform subscriptions, and exclusive offers.
-          </p>
-
-          {submitted ? (
-            <div className="flex items-center justify-center gap-2 text-primary animate-scale-in">
-              <CheckCircle className="h-5 w-5" />
-              <span>Thank you for subscribing!</span>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="flex gap-2 sm:mx-auto sm:max-w-md reveal">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="h-12"
-              />
-              <Button type="submit" size="lg">
-                Subscribe
-              </Button>
-            </form>
-          )}
+          <div className="flex flex-col sm:flex-row gap-2">
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="flex-1 rounded-md border bg-background px-4 py-2"
+            />
+            <Button type="submit" size="lg" className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50">
+              Subscribe
+            </Button>
+          </div>
         </div>
       </div>
     </section>

@@ -6,19 +6,12 @@ import { Wallet, Sparkles, Flame } from "lucide-react"
 
 export default function FeatureCards() {
   return (
-    <section className="container py-16">
-      <div className="mb-12 text-center reveal">
-        <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
-          <Sparkles className="mr-1 h-3 w-3" />
-          Why Choose Us
-        </Badge>
-        <h2 className="text-4xl font-bold tracking-tight mb-6">Features / Why $SCRIBE?</h2>
-        <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
-          Discover why $SCRIBE is the future of subscription payments
-        </p>
+    <section className="container py-8 md:py-12">
+      <div className="mb-8 text-center">
+        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">Why Choose $SCRIBE?</h2>
+        <p className="mt-4 text-muted-foreground">Discover the unique benefits of using our native token</p>
       </div>
-
-      <div className="grid gap-6 md:grid-cols-3 reveal">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <FeatureCard
           icon={<Wallet className="h-8 w-8" />}
           title="Wallet-Native Payments"
