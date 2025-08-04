@@ -32,7 +32,6 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "Subscriptions", path: "/subscriptions" },
     { name: "Categories", path: "/categories" },
-    { name: "Deals", path: "/deals" },
     { name: "About", path: "/about" },
   ]
 
