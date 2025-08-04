@@ -14,7 +14,7 @@ export default function HomeFAQ() {
         </Badge>
         <h2 className="text-4xl font-bold tracking-tight mb-6">Frequently Asked Questions</h2>
         <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
-          Everything you need to know about SolScribe subscriptions
+          Everything you need to know about SOLSUBSCRIBE subscriptions
         </p>
       </div>
 

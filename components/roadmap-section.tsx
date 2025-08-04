@@ -34,10 +34,6 @@ export default function RoadmapSection() {
         "Hooked revenue to daily $SCRIBE buyback + burn mechanism",
         "Wallet concurrency tests and auditor reviews",
         "Real-time subscription delivery using Bitrefill, Coinsbee, CryptoRefills",
-        "Multi-region infra, AES-256 encryption, retry queues, stress testing, and audits",
-        "Setup of social bots, multi-sig treasury, and analytics stack",
-        "REST/GraphQL APIs for third-party integration",
-        "UI/UX finalized; zero vesting; fair launch model"
       ],
       progress: 100,
       status: 'completed'

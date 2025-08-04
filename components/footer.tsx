@@ -11,11 +11,11 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/solistryx-logo-clean.png" width={32} height={32} alt="SolScribe Logo" />
-              <span className="text-xl font-bold">SolScribe</span>
+              <Image src="/solistryx-logo-clean.png" width={32} height={32} alt="SOLSUBSCRIBE Logo" />
+              <span className="text-xl font-bold">SOLSUBSCRIBE</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Buy premium platform subscriptions with $SOLSCRIBE. Get Netflix, Spotify, Adobe, and more at discounted
+              Buy premium platform subscriptions with $SCRIBE. Get Netflix, Spotify, Adobe, and more at discounted
               prices.
             </p>
             <div className="flex gap-4">
@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} SolScribe. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} SOLSUBSCRIBE. All rights reserved.</p>
           <div className="mt-2 flex justify-center gap-4">
             <Link href="/privacy" className="hover:text-foreground">
               Privacy Policy

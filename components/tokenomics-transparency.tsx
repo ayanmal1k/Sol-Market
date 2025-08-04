@@ -35,7 +35,7 @@ export default function TokenomicsTransparency() {
           Tokenomics
         </Badge>
         <h2 className="text-3xl font-bold tracking-tight mb-4">
-          Transparent & Fair Token Economics
+          $SCRIBE Token Economics
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Built on the principles of fairness and sustainability, our token distribution ensures long-term value for all stakeholders
