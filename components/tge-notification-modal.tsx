@@ -40,7 +40,7 @@ export default function TGENotificationModal({ subscriptionName }: TGENotificati
           <Button
             variant="outline"
             className="w-full gap-2"
-            onClick={() => window.open("https://t.me/solsubscription", "_blank")}
+            onClick={() => window.open("https://t.me/SolSubscribe", "_blank")}
           >
             <i className="fa-brands fa-telegram h-5 w-5" />
             Join Telegram Community
@@ -48,7 +48,7 @@ export default function TGENotificationModal({ subscriptionName }: TGENotificati
           <Button
             variant="outline"
             className="w-full gap-2"
-            onClick={() => window.open("https://x.com/solsubscription", "_blank")}
+            onClick={() => window.open("https://x.com/Solsubscribe", "_blank")}
           >
             <i className="fa-brands fa-x-twitter h-5 w-5" />
             Follow on X

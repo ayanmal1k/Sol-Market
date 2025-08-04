@@ -121,7 +121,7 @@ export default function RoadmapSection() {
   }
 
   return (
-    <section className="container py-16">
+    <section className="container py-4">
       <div className="mb-12 text-center reveal">
         <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
           Development Timeline

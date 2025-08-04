@@ -21,8 +21,8 @@ export default function Newsletter() {
   }
 
   return (
-    <section className="container py-8 md:py-12">
-      <div className="relative overflow-hidden rounded-lg bg-primary/5 px-4 py-12 md:px-6">
+    <section className="container py-4">
+      <div className="relative overflow-hidden rounded-lg bg-primary/5 px-4 py-8 md:px-6">
         <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-primary/10 to-transparent" />
         <div className="relative grid gap-4 md:grid-cols-2 md:gap-8">
           <div>

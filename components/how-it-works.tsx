@@ -26,7 +26,7 @@ export default function HowItWorks() {
   ]
 
   return (
-    <section className="container">
+    <section className="container py-4">
       <div className="mb-12 text-center reveal">
         <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
           <MessageSquare className="mr-1 h-3 w-3" />

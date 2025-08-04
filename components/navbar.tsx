@@ -99,13 +99,13 @@ export default function Navbar() {
                 </div>
                 <div className="flex items-center gap-2 mt-2">
                   <Button variant="ghost" size="icon" asChild>
-                    <Link href="https://t.me/solscription" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://t.me/SolSubscribe" target="_blank" rel="noopener noreferrer">
                       <i className="fa-brands fa-telegram h-5 w-5"></i>
                       <span className="sr-only">Telegram</span>
                     </Link>
                   </Button>
                   <Button variant="ghost" size="icon" asChild>
-                    <Link href="https://twitter.com/solscription" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://x.com/Solsubscribe" target="_blank" rel="noopener noreferrer">
                       <i className="fa-brands fa-x-twitter h-5 w-5"></i>
                       <span className="sr-only">X (Twitter)</span>
                     </Link>
@@ -196,13 +196,13 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <div className="flex items-center gap-2 px-4">
                     <Button variant="ghost" size="icon" asChild>
-                      <Link href="https://t.me/solscription" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://t.me/SolSubscribe" target="_blank" rel="noopener noreferrer">
                         <i className="fa-brands fa-telegram h-5 w-5"></i>
                         <span className="sr-only">Telegram</span>
                       </Link>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
-                      <Link href="https://twitter.com/solscription" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://x.com/Solsubscribe" target="_blank" rel="noopener noreferrer">
                         <i className="fa-brands fa-x-twitter h-5 w-5"></i>
                         <span className="sr-only">X (Twitter)</span>
                       </Link>

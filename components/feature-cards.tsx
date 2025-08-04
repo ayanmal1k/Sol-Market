@@ -6,7 +6,7 @@ import { Wallet, Sparkles, Flame } from "lucide-react"
 
 export default function FeatureCards() {
   return (
-    <section className="container py-8 md:py-12">
+    <section className="container py-4">
       <div className="mb-8 text-center">
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">Why Choose $SCRIBE?</h2>
         <p className="mt-4 text-muted-foreground">Discover the unique benefits of using our native token</p>

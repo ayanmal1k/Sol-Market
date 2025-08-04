@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: solscription
+    env: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://solscription.onrender.com
+    autoDeploy: true
+    branch: main

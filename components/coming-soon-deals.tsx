@@ -39,8 +39,8 @@ export default function ComingSoonDeals() {
   ]
 
   return (
-    <section className="container py-16">
-      <div className="mb-12 text-center reveal">
+    <section className="container py-4">
+      <div className="mb-8 text-center reveal">
         <Badge className="mb-4 animate-pulse bg-primary/10 text-primary hover:bg-primary/20">
           <Sparkles className="mr-1 h-3 w-3" />
           Coming Soon

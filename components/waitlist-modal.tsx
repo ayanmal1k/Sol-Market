@@ -96,6 +96,23 @@ export default function WaitlistModal({ isOpen, onClose, subscriptionName }: Wai
                 You have been added to the waitlist. We will notify you when {subscriptionName} becomes available.
               </p>
             </div>
+            <div className="mt-4 space-y-2">
+              <p className="text-sm text-muted-foreground">Follow us for updates:</p>
+              <div className="flex gap-2">
+                <Button variant="outline" className="w-full gap-2" asChild>
+                  <a href="https://t.me/SolSubscribe" target="_blank" rel="noopener noreferrer">
+                    <i className="fa-brands fa-telegram h-5 w-5" />
+                    Join Telegram
+                  </a>
+                </Button>
+                <Button variant="outline" className="w-full gap-2" asChild>
+                  <a href="https://x.com/Solsubscribe" target="_blank" rel="noopener noreferrer">
+                    <i className="fa-brands fa-x-twitter h-5 w-5" />
+                    Follow on X
+                  </a>
+                </Button>
+              </div>
+            </div>
             <Button onClick={handleClose} className="w-full">
               Close
             </Button>

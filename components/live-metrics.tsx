@@ -12,7 +12,7 @@ const isUtilityActive = () => {
 
 export default function LiveMetrics() {
   return (
-    <section className="container py-16">
+    <section className="container py-4">
       <div className="mb-12 text-center reveal">
         <Badge className="mb-4">
           <ChartLine className="mr-1 h-3 w-3" />

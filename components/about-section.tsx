@@ -6,7 +6,7 @@ import { Lightbulb, CreditCard, Zap, Mail, Globe } from "lucide-react"
 
 export default function AboutSection() {
   return (
-    <section className="container py-16">
+    <section className="container py-4">
       <Card className="relative overflow-hidden border-2 border-primary/20 p-8">
         {/* Background effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent"></div>

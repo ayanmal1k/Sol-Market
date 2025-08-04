@@ -86,6 +86,16 @@ export default function Home() {
                 <Button size="lg" asChild className="animate-bounce-slow">
                   <Link href="/subscriptions">Join Our Waitlist</Link>
                 </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link href="https://t.me/SolSubscribe" target="_blank" rel="noopener noreferrer">
+                    Join Telegram
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link href="https://x.com/Solsubscribe" target="_blank" rel="noopener noreferrer">
+                    Follow on X
+                  </Link>
+                </Button>
               </div>
               <div className="flex flex-wrap gap-8 animate-fade-in delay-400">
                 <div>
@@ -133,16 +143,22 @@ export default function Home() {
         </section>
 
         {/* Countdown Timer */}
-        <CountdownTimer />
+        <section className="mb-6">
+          <CountdownTimer />
+        </section>
 
         {/* Live Metrics Section */}
-        <LiveMetrics />
+        <section className="mb-6">
+          <LiveMetrics />
+        </section>
 
         {/* About Section */}
-        <AboutSection />
+        <section className="mb-6">
+          <AboutSection />
+        </section>
 
         {/* Launch Announcement Banner */}
-        <section className="container">
+        <section className="container mb-6">
           <div className="relative overflow-hidden rounded-lg border border-primary/20 bg-primary/5 p-6 my-4 animate-pulse-slow">
             <div className="absolute -right-20 -top-20 h-[200px] w-[200px] rounded-full bg-primary/10 blur-3xl"></div>
             <div className="absolute -bottom-20 -left-20 h-[200px] w-[200px] rounded-full bg-primary/10 blur-3xl"></div>
@@ -163,7 +179,7 @@ export default function Home() {
         </section>
 
         {/* Holder Rewards Section */}
-        <section className="container py-8 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <section className="container py-6 px-4 sm:px-6 lg:px-8 relative overflow-hidden mb-6">
           {/* Animated background coins */}
           <div className="absolute inset-0 pointer-events-none">
             <div className="animate-float absolute top-10 left-[10%] text-yellow-500 opacity-20 hidden sm:block">
@@ -249,7 +265,7 @@ export default function Home() {
         <TokenomicsTransparency />
 
         {/* Trending Subscriptions */}
-        <section className="container py-8">
+        <section className="container py-6 mb-6">
           <div className="mb-8 flex flex-wrap items-center justify-between gap-4 reveal">
             <div>
               <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
@@ -327,22 +343,34 @@ export default function Home() {
         </section>
 
         {/* Why $SCRIBE Features Section */}
-        <FeatureCards />
+        <section className="mb-6">
+          <FeatureCards />
+        </section>
 
         {/* Coming Soon Deals Section */}
-        <ComingSoonDeals />
+        <section className="mb-6">
+          <ComingSoonDeals />
+        </section>
 
         {/* How It Works */}
-        <HowItWorks />
+        <section className="mb-6">
+          <HowItWorks />
+        </section>
 
         {/* Roadmap Section */}
-        <RoadmapSection />
+        <section className="mb-6">
+          <RoadmapSection />
+        </section>
 
         {/* Newsletter */}
-        <Newsletter />
+        <section className="mb-6">
+          <Newsletter />
+        </section>
 
         {/* FAQ Section */}
-        <HomeFAQ />
+        <section className="mb-6">
+          <HomeFAQ />
+        </section>
       </div>
     </>
   )
