@@ -61,34 +61,9 @@ export default function SubscriptionDetailPage({ params }: { params: { id: strin
 
             <h1 className="text-3xl font-bold">{subscriptionData.name}</h1>
             <p className="text-lg text-muted-foreground">{subscriptionData.duration} Subscription</p>
-
-            <div className="mt-4 flex items-center gap-4">
-              <div className="flex items-center gap-1">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <span
-                      key={i}
-                      className={`text-sm ${i < Math.floor(subscriptionData.rating) ? "text-yellow-400" : "text-gray-300"}`}
-                    >
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <span className="text-sm font-medium">{subscriptionData.rating}</span>
-                <span className="text-sm text-muted-foreground">({subscriptionData.reviews} reviews)</span>
-              </div>
-              <div className="flex items-center gap-1 text-muted-foreground">
-                <Eye className="h-4 w-4" />
-                <span>{subscriptionData.sold} sold</span>
-              </div>
-            </div>
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <div className="flex items-center gap-1 text-muted-foreground">
-              <Eye className="h-4 w-4" />
-              <span>{subscriptionData.sold} sold</span>
-            </div>
             <div className="flex items-center gap-1 text-muted-foreground">
               <Users className="h-4 w-4" />
               <span>Verified seller</span>
@@ -198,22 +173,6 @@ export default function SubscriptionDetailPage({ params }: { params: { id: strin
               </div>
             </TabsContent>
           </Tabs>
-
-          <div className="rounded-lg border p-4">
-            <div className="flex items-start gap-2">
-              <Info className="mt-0.5 h-4 w-4 text-muted-foreground" />
-              <div>
-                <h3 className="font-semibold">How it works</h3>
-                <p className="text-sm text-muted-foreground">
-                  After payment, you'll receive login credentials via email within 5 minutes. All accounts are private
-                  and secure. If you face any issues, our support team is available 24/7.
-                </p>
-                <Button variant="link" className="h-auto p-0 text-primary">
-                  Contact support
-                </Button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
