@@ -72,15 +72,19 @@ export default function Home() {
         <section className="hero-gradient relative overflow-hidden pt-0">
           <div className="container relative z-10 grid gap-6 pb-12 pt-6 md:gap-8 md:pb-16 md:pt-8 lg:grid-cols-2 lg:gap-12 lg:pb-24 lg:pt-16">
             <div className="flex flex-col justify-center gap-4 md:gap-6">
-              <Badge className="w-fit bg-primary/10 text-primary hover:bg-primary/20 animate-fade-in">
+              <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
                 <Sparkles className="mr-1 h-3 w-3 animate-pulse" />
                 Premium subscriptions with crypto
               </Badge>
-              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl animate-slide-in-left">
-                Buy <span className="text-primary">Premium</span> Subscriptions Directly with $SOL or $SCRIBE
+              <h1 className="text-xl font-bold tracking-tight sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl animate-slide-in-left">
+                Buy Premium Subscriptions 
+                <br className="block lg:hidden" />
+                Directly with $SOL or 
+                <br className="block lg:hidden" />
+                <span className="text-primary"> $SCRIBE</span>
               </h1>
-              <p className="text-xl text-muted-foreground animate-slide-in-left delay-200">
-                Pay with SOL / USDC or directly with our own Native Token $SCRIBE to get Discounts upto 75%.
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground animate-slide-in-left delay-200">
+                Get up to 75% off when you pay with SOL, USDC, or our native $SCRIBE token.
               </p>
               <div className="flex flex-wrap gap-4 animate-fade-in delay-300">
                 <Button size="lg" asChild className="animate-bounce-slow">
@@ -115,11 +119,11 @@ export default function Home() {
             <div className="relative flex items-center justify-center">
               <div className="relative h-[400px] w-[400px] animate-float">
                 <div className="absolute inset-0 animate-spin-slow opacity-30 blur-xl">
-                  <Image src="/solistryx-logo-clean.png" alt="Glow effect" fill className="object-contain" priority />
+                  <Image src="/solistryx-logo-clean.png" alt="SOLSUBSCRIBE" fill className="object-contain" priority />
                 </div>
                 <Image
                   src="/solistryx-logo-clean.png"
-                  alt="Solsubscription Logo"
+                  alt="SOLSUBSCRIBE Logo"
                   fill
                   className="object-contain"
                   priority

@@ -8,9 +8,9 @@ import Link from "next/link"
 export default function FAQPage() {
   const faqs = [
     {
-      question: "How does Solcyclix work?",
+      question: "How does SOLSUBSCRIBE work?",
       answer:
-        "Solsubscription allows you to purchase premium subscriptions at discounted prices using Solana cryptocurrency. We buy subscriptions in bulk and pass the savings to you. After payment, you'll receive login credentials via email within 5 minutes.",
+        "SOLSUBSCRIBE allows you to purchase premium subscriptions at discounted prices using Solana cryptocurrency. We buy subscriptions in bulk and pass the savings to you. After payment, you'll receive login credentials via email within 5 minutes.",
     },
     {
       question: "Are these subscriptions legitimate?",
