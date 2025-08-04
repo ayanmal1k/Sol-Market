@@ -61,9 +61,10 @@ export default function Navbar() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left">
+                {/* Mobile Nav */}
                 <Link href="/" className="flex items-center gap-2 pb-6">
-                  <Image src="/solistryx-logo-clean.png" width={32} height={32} alt="SolScribe Logo" />
-                  <span className="text-xl font-bold">SolScribe</span>
+                  <Image src="/solistryx-logo-clean.png" width={32} height={32} alt="SOLSUBSCRIBE Logo" />
+                  <span className="text-xl font-bold">SOLSUBSCRIBE</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {routes.map((route) => (
@@ -149,8 +150,8 @@ export default function Navbar() {
             </Sheet>
 
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/solistryx-logo-clean.png" width={32} height={32} alt="SolScribe Logo" />
-              <span className="hidden text-xl font-bold sm:inline-block">SolScribe</span>
+              <Image src="/solistryx-logo-clean.png" width={32} height={32} alt="SOLSUBSCRIBE Logo" />
+              <span className="hidden text-xl font-bold sm:inline-block">SOLSUBSCRIBE</span>
             </Link>
 
             <NavigationMenu className="hidden md:flex">

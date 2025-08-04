@@ -37,7 +37,7 @@ export default function WalletConnectModal({ isOpen, onClose }: WalletConnectMod
         </DialogHeader>
         <div className="space-y-4">
           <p className="text-sm text-muted-foreground">
-            Connect your Phantom wallet to start using SolScribe.
+            Connect your Phantom wallet to start using SOLSUBSCRIBE.
           </p>
           <div className="space-y-3">
             <Button

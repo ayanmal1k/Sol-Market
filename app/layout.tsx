@@ -16,9 +16,9 @@ const bricolage = Bricolage_Grotesque({
 })
 
 export const metadata: Metadata = {
-  title: "SolScribe | Platform Subscriptions Marketplace",
+  title: "SOLSUBSCRIBE | Platform Subscriptions Marketplace",
   description:
-    "Buy premium platform subscriptions with $SOLSCRIBE. Netflix, Spotify, Adobe, and more at discounted prices.",
+    "Buy premium platform subscriptions with $SCRIBE. Netflix, Spotify, Adobe, and more at discounted prices.",
   icons: {
     icon: [
       {
