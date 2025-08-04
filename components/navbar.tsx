@@ -5,7 +5,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -15,7 +14,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
-import { Menu, Search, Wallet, Sun, Moon, Heart, ChevronDown, TwitterIcon, MessageCircle } from "lucide-react"
+import { Menu, Wallet, Sun, Moon, ChevronDown, TwitterIcon } from "lucide-react"
 import { ModeToggle } from "./mode-toggle"
 import { useTheme } from "next-themes"
 import { useWallet } from "./wallet-provider"
@@ -24,7 +23,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Badge } from "@/components/ui/badge"
 
 export default function Navbar() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false)
   const pathname = usePathname()
   const { theme, setTheme } = useTheme()
@@ -81,15 +79,6 @@ export default function Navbar() {
                       {route.name}
                     </Link>
                   ))}
-                  <Link
-                    href="/wishlist"
-                    className={cn(
-                      "text-lg font-medium transition-colors hover:text-primary",
-                      pathname === "/wishlist" ? "text-primary" : "text-muted-foreground",
-                    )}
-                  >
-                    Wishlist
-                  </Link>
                 </nav>
                 {/* Social Links for Mobile */}
                 <div className="flex items-center gap-2 mt-4">
@@ -214,36 +203,6 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            {isSearchOpen ? (
-              <div className="relative hidden md:block">
-                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                <Input
-                  type="search"
-                  placeholder="Search subscriptions..."
-                  className="w-[200px] pl-8 md:w-[300px]"
-                  autoFocus
-                  onBlur={() => setIsSearchOpen(false)}
-                />
-              </div>
-            ) : (
-              <Button variant="ghost" size="icon" className="hidden md:flex" onClick={() => setIsSearchOpen(true)}>
-                <Search className="h-5 w-5" />
-                <span className="sr-only">Search</span>
-              </Button>
-            )}
-
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Search className="h-5 w-5" />
-              <span className="sr-only">Search</span>
-            </Button>
-
-            <Button variant="ghost" size="icon" asChild className="hidden md:flex">
-              <Link href="/wishlist">
-                <Heart className="h-5 w-5" />
-                <span className="sr-only">Wishlist</span>
-              </Link>
-            </Button>
-
             <ModeToggle />
 
             {/* Desktop Wallet */}
