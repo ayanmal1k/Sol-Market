@@ -19,9 +19,9 @@ export default function AboutSection() {
               <Lightbulb className="mr-1 h-3 w-3" />
               About Us
             </Badge>
-            <h2 className="text-4xl font-bold tracking-tight mb-6">What Is SolSubscribe?</h2>
+            <h2 className="text-4xl font-bold tracking-tight mb-6">What Is SOLSUBSCRIBE?</h2>
             <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
-              SolSubscribe is the first crypto-native subscription protocol built on Solana.
+              SOLSUBSCRIBE is the first crypto-native subscription protocol built on Solana.
               We make it possible to use your crypto directly to unlock mainstream services — fast, private, and borderless.
             </p>
           </div>
